@@ -1,0 +1,73 @@
+/* test-site-style.css - For OJS site stylesheet testing */
+
+/* Change background color for the header */
+.pkp_site_name {
+  background-color: #01bbbb !important;
+  padding: 10px;
+}
+
+/* Change color of links */
+a {
+  color: #0077cc !important;
+}
+
+/* Add a border around the main content */
+.pkp_structure_content {
+  border: 2px solid #ccc;
+  padding: 20px;
+}
+
+/* Change body font */
+body {
+  font-family: "Tahoma", sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* RTL direction test (optional for Arabic) */
+html[dir="rtl"] body {
+  text-align: right;
+}
+.pkp_site_name {
+  text-align: right;
+}
+.pkp_structure_content {
+  direction: rtl;
+}
+.pkp_structure_content p {
+  text-align: right;
+}
+.pkp_structure_content a {
+  direction: rtl;
+}
+.pkp_structure_content ul {
+  direction: rtl;
+}
+.pkp_structure_content ol {
+  direction: rtl;
+}
+.pkp_structure_content blockquote {
+  direction: rtl;
+}
+.pkp_structure_content table {
+  direction: rtl;
+}
+
+/* Footer styling */
+.pkp_site_footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.pkp_site_footer a {
+  color: #ffcc00 !important;
+}
+.pkp_site_footer a:hover {
+  color: #ffff66 !important;
+}
+.pkp_site_footer a:visited {
+  color: #cc9900 !important;
+}
+.pkp_site_footer a:active {
+  color: #ff6600 !important;
+}
