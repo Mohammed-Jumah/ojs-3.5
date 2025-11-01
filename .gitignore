@@ -1,0 +1,284 @@
+# Open Journal Systems (OJS) .gitignore
+
+# =========================
+# PHP
+# =========================
+*.php~
+*.php.bak
+*.php.swp
+*.php.tmp
+
+# =========================
+# Composer
+# =========================
+/vendor/
+/lib/pkp/lib/vendor/
+composer.phar
+composer.lock
+
+# =========================
+# OJS Configuration
+# =========================
+# Main configuration file (contains sensitive database credentials)
+config.inc.php
+
+# Database configuration
+dbscripts/xml/data.sql
+dbscripts/xml/schema.xml
+
+# =========================
+# OJS Cache and Generated Files
+# =========================
+/cache/
+/cache/*
+/cache/_db/
+/cache/t_cache/
+/cache/t_compile/
+/cache/t_config/
+
+# Compiled templates
+/templates_c/
+
+# Public files (uploads, cover images, etc.)
+/public/journals/
+/public/site/
+
+# Files directory (uploaded files)
+/files/
+
+# =========================
+# Plugins Cache
+# =========================
+plugins/*/vendor/
+plugins/*/cache/
+plugins/*/composer.lock
+
+# Plugin-specific ignores
+plugins/paymethod/paypal/vendor/
+plugins/generic/*/vendor/
+plugins/importexport/*/vendor/
+plugins/generic/citationStyleLanguage/lib/vendor/
+
+# =========================
+# Logs
+# =========================
+*.log
+/logs/
+error_log
+access.log
+
+# =========================
+# Build and Development
+# =========================
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# JavaScript build files
+/js/build/
+/js/pkp.min.js
+/js/lib/pkp/js/build/
+/styles/compiled/
+
+# Cypress testing
+/cypress/screenshots/
+/cypress/videos/
+/cypress/downloads/
+
+# =========================
+# IDE and Editor Files
+# =========================
+# PhpStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# NetBeans
+nbproject/
+
+# Eclipse
+.project
+.metadata
+.buildpath
+.settings/
+
+# =========================
+# Operating System Files
+# =========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =========================
+# Version Control
+# =========================
+.svn/
+.hg/
+.bzr/
+
+# =========================
+# Security and Sensitive Files
+# =========================
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Security keys
+*.pem
+*.key
+*.crt
+*.p12
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+*.tmp
+
+# Database dumps
+*.sql
+*.sqlite
+*.db
+
+# =========================
+# Testing and Coverage
+# =========================
+# PHPUnit
+.phpunit.result.cache
+coverage/
+coverage.xml
+phpunit.xml
+
+# Behat
+behat.yml
+
+# =========================
+# Documentation Build
+# =========================
+/docs/_build/
+/docs/build/
+
+# =========================
+# Localization
+# =========================
+# Compiled locale files (keep source .po files, ignore compiled .mo files)
+*.mo
+
+# =========================
+# Temporary Files
+# =========================
+tmp/
+temp/
+*.tmp
+*.temp
+
+# =========================
+# Package Managers
+# =========================
+# NPM
+package-lock.json
+
+# Yarn
+yarn.lock
+
+# Bower
+bower_components/
+
+# =========================
+# Archives
+# =========================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# =========================
+# Custom Application Files
+# =========================
+# Custom uploaded files
+/public/journals/*/
+/files/journals/*/
+
+# Custom plugins (if you have local development plugins)
+# plugins/custom/
+
+# Local configuration overrides
+config.local.inc.php
+
+# Installation files (remove after installation)
+install.php
+
+# Registry cache
+/registry/cache/
+
+# OAIPMH generated files
+/oai/
+
+# Statistics cache
+/usage/
+
+# Scheduled tasks logs
+scheduledTaskLogs.txt
