@@ -40,9 +40,30 @@
 		{/if}
 
 		<div class="pkp_brand_footer">
-			<a href="{url page="about" op="aboutThisPublishingSystem"}">
-				<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-			</a>
+			<div class="pkp_brand_footer_content">
+				{* Social Media Icons - Custom Footer Implementation *}
+				<div class="social-media-icons">
+					<a href="https://facebook.com" title="Facebook" target="_blank" rel="noopener noreferrer" class="social-facebook">
+						<span class="fa fa-facebook" aria-hidden="true"></span>
+					</a>
+					<a href="https://twitter.com" title="Twitter" target="_blank" rel="noopener noreferrer" class="social-twitter">
+						<span class="fa fa-twitter" aria-hidden="true"></span>
+					</a>
+					<a href="https://linkedin.com/company" title="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-linkedin">
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
+					</a>
+					<a href="https://instagram.com" title="Instagram" target="_blank" rel="noopener noreferrer" class="social-instagram">
+						<span class="fa fa-instagram" aria-hidden="true"></span>
+					</a>
+					<a href="https://youtube.com" title="YouTube" target="_blank" rel="noopener noreferrer" class="social-youtube">
+						<span class="fa fa-youtube-play" aria-hidden="true"></span>
+					</a>
+				</div>
+
+				<a href="{url page="about" op="aboutThisPublishingSystem"}">
+					<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
+				</a>
+			</div>
 		</div>
 	</div>
 </div><!-- pkp_structure_footer_wrapper -->

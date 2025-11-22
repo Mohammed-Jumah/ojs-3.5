@@ -16,6 +16,7 @@ namespace APP\plugins\themes\default;
 
 use APP\core\Application;
 use APP\file\PublicFileManager;
+use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
 
@@ -190,6 +191,29 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
                 ['inline' => true]
             );
         }
+
+        // Inject the selected base color as a CSS variable for custom stylesheets
+        if ($this->getOption('baseColour')) {
+            $this->addStyle(
+                'pkpHeaderColor',
+                ':root { --pkp-header-color: ' . $this->getOption('baseColour') . '; }',
+                ['inline' => true]
+            );
+        }
+
+        // Add custom brand favicon for both frontend and backend
+        // Custom favicon implementation for modern branding
+        $faviconUrl = $request->getBaseUrl() . '/public/vificon.png';
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->addHeader(
+            'favicon',
+            '<link rel="icon" type="image/png" href="' . $faviconUrl . '">' .
+            '<link rel="shortcut icon" type="image/png" href="' . $faviconUrl . '">' .
+            '<link rel="apple-touch-icon" href="' . $faviconUrl . '">',
+            [
+                'contexts' => ['frontend', 'backend']
+            ]
+        );
 
         // Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
         $min = Config::getVar('general', 'enable_minified') ? '.min' : '';
